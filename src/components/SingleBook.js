@@ -1,24 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 
-const SingleBook = () => {
-    console.log('this is props');
-//   const { book } = props;
-//   const { title, author } = book;
+const SingleBook = (props) => {
+  const { book } = props;
+  const { title, author } = book;
   return (
-    <li> hello
-      {/* {title}
+    <li>
+      {title}
       {' '}
       By
       {author}
-      <button type="button">Delete</button> */}
+      <button type="button">Delete</button>
     </li>
   );
 };
 
 SingleBook.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  book: PropTypes.shape({ title: string, author: string }).isRequired,
+
 };
 
 export default SingleBook;

@@ -5,7 +5,7 @@ import AddBook from './AddBook';
 const Books = () => (
   <div className="bookContainer">
     <BookList />
-    {/* <AddBook /> */}
+    <AddBook />
   </div>
 );
 

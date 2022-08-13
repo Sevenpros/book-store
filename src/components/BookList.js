@@ -8,18 +8,15 @@ const BookList = () => {
       title: 'Learn Programming',
       author: 'Seth.B',
     },
+    {
+      id: 2,
+      title: 'Learn Programming',
+      author: 'Seth.B',
+    },
   ];
   return (
-    <ul className="bookList">
-      {
-            books.map((book) => {
-              const { id } = book;
-                <SingleBook
-                  key={id}
-                  book={book}
-                />;
-            })
-           }
+    <ul>
+      {books.map((book) => <SingleBook key={book.id} book={book} />)}
     </ul>
   );
 };

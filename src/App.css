@@ -5,4 +5,13 @@ body {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navBar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
 }
