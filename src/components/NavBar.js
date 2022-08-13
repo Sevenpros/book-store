@@ -10,7 +10,7 @@ const Navbar = () => {
     },
     {
       id: 2,
-      path: '/about',
+      path: '/categories',
       text: 'Categories',
     },
   ];
