@@ -16,7 +16,12 @@ const BookList = () => {
   ];
   return (
     <ul>
-      {books.map((book) => <SingleBook key={book.id} book={book} />)}
+      {books.map((book) => (
+        <SingleBook
+          key={book.id}
+          book={book}
+        />
+      ))}
     </ul>
   );
 };
