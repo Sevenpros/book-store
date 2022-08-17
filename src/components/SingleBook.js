@@ -1,23 +1,47 @@
 import React from 'react';
 import PropTypes, { string } from 'prop-types';
+import { useDispatch } from 'react-redux/es/exports';
+import { removeBookActionCreator } from '../redux/books/books';
 
 const SingleBook = (props) => {
+  const dispatch = useDispatch();
   const { book } = props;
-  const { title, author } = book;
+  const { id, title, author } = book;
+  const onClickHandle = (e) => {
+    const { id } = e.target;
+    if (id) {
+      dispatch({
+        type: removeBookActionCreator().type,
+        id,
+      });
+    }
+  };
   return (
-    <li>
-      {title}
+    <>
+      <li className="bookItem">
+        {title}
+        {' '}
+        By
+        {' '}
+        {author}
+        {' '}
+        <button
+          type="button"
+          onClick={onClickHandle}
+          id={id}
+        >
+          Delete
+        </button>
+      </li>
+      <br />
       {' '}
-      By
-      {author}
-      <button type="button">Delete</button>
-    </li>
+
+    </>
   );
 };
 
 SingleBook.propTypes = {
-  book: PropTypes.shape({ title: string, author: string }).isRequired,
-
+  book: PropTypes.shape({ id: string, title: string, author: string }).isRequired,
 };
 
 export default SingleBook;

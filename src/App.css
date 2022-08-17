@@ -15,3 +15,12 @@ ul {
   align-items: center;
   margin-bottom: 20px;
 }
+
+.bookList {
+  width: 400px;
+}
+
+.bookItem {
+  display: flex;
+  justify-content: space-between;
+}
