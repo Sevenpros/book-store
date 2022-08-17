@@ -1,9 +1,7 @@
 const CHECK_STATUS = 'CHECK_STATUS';
-const initialState = {
-  categories: [],
-};
+const categories = [];
 
-const catReducer = (state = initialState, action = {}) => {
+const catReducer = (state = categories, action = {}) => {
   switch (action.type) {
     case CHECK_STATUS:
       return { categories: 'Under Contstruction' };
