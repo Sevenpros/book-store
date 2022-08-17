@@ -1,21 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import SingleBook from './SingleBook';
 
 const BookList = () => {
-  const books = [
-    {
-      id: 1,
-      title: 'Learn Programming',
-      author: 'Seth.B',
-    },
-    {
-      id: 2,
-      title: 'Learn Programming',
-      author: 'Seth.B',
-    },
-  ];
+  const books = useSelector((state) => state.booksReducer);
   return (
-    <ul>
+    <ul className="bookList">
       {books.map((book) => (
         <SingleBook
           key={book.id}

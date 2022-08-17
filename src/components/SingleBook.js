@@ -5,13 +5,20 @@ const SingleBook = (props) => {
   const { book } = props;
   const { title, author } = book;
   return (
-    <li>
-      {title}
+    <>
+      <li className="bookItem">
+        {title}
+        {' '}
+        By
+        {' '}
+        {author}
+        {' '}
+        <button type="button">Delete</button>
+      </li>
+      <br />
       {' '}
-      By
-      {author}
-      <button type="button">Delete</button>
-    </li>
+
+    </>
   );
 };
 
