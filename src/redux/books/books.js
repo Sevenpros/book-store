@@ -3,14 +3,17 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 
 const initialState = [
   {
+    id: 1,
     title: 'programming',
     author: 'Seth Bizimana',
   },
   {
+    id: 2,
     title: 'learn Python',
     author: 'Brandon H',
   },
   {
+    id: 3,
     title: 'The best of REACT',
     author: 'React Tutor',
   },
