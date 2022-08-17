@@ -6,10 +6,11 @@ const BookList = () => {
   const books = useSelector((state) => state.booksReducer);
   return (
     <ul className="bookList">
-      {books.map((book) => (
+      {books.map((book, index) => (
         <SingleBook
           key={book.id}
           book={book}
+          index={index}
         />
       ))}
     </ul>

@@ -34,6 +34,6 @@ const booksRecuder = (state = initialState, action = {}) => {
 };
 export const addBookActionCreator = () => ({ type: ADD_BOOK });
 
-export const remmoveBookActionCreator = () => ({ type: REMOVE_BOOK });
+export const removeBookActionCreator = () => ({ type: REMOVE_BOOK });
 
 export default booksRecuder;
