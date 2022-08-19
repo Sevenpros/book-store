@@ -8,5 +8,4 @@ const Books = () => (
     <AddBook />
   </div>
 );
-
 export default Books;
