@@ -26,7 +26,7 @@ const AddBook = () => {
       item_id: uuidv4(),
       title: values.title,
       author: values.author,
-      category: values.category,
+      category: 'Technology',
     };
 
     dispatch(addBook(book));
@@ -41,8 +41,8 @@ const AddBook = () => {
 
   return (
     <div className="form-container">
-      <h3>add New BoOk</h3>
-      <form onSubmit={addBookHandler}>
+      <h3 className="newBookTitle">ADD NEW BOOK</h3>
+      <form onSubmit={addBookHandler} className="bookForm">
         <input
           className="form-title"
           name="title"
@@ -52,28 +52,14 @@ const AddBook = () => {
           onChange={valueChangeHandler}
         />
         <input
-          className="form-author"
+          id="form-author"
           name="author"
           type="text"
-          placeholder="Which Author?"
+          placeholder="Author"
           value={values.author}
           onChange={valueChangeHandler}
         />
-        <select
-          className="form-category"
-          name="category"
-          type="text"
-          placeholder="Which Category?"
-          value={values.category}
-          onChange={valueChangeHandler}
-        >
-          <option value="action">action</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Tech">Tech</option>
-          <option value="Education">Education</option>
-          <option value="magazine">magazine</option>
-        </select>
-        <button type="submit">Add Book</button>
+        <button type="submit" className="updateBtn addBtn">Add Book</button>
       </form>
     </div>
   );
