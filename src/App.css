@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 body {
-  padding: 24px;
+  padding: 0 24px;
+  font-family: Montserrat, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 4px 0;
 }
 
 ul {
@@ -9,18 +21,213 @@ ul {
   margin: 0;
 }
 
+ul li a {
+  text-decoration: none;
+  font-size: 8px;
+}
+
 .navBar {
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
+  min-height: 45px;
+  padding: 0 40px;
+  box-shadow: 0 0 5px 0 rgb(221, 221, 221);
+}
+
+#logo a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon {
+  color: #0290ff;
 }
 
 .bookList {
-  width: 400px;
+  padding: 0 40px;
 }
 
 .bookItem {
   display: flex;
   justify-content: space-between;
+  min-height: 70px;
+  box-shadow: 0 0 5px 0 rgb(221, 221, 221);
+  padding: 8px;
+  align-items: center;
+  padding-right: 30px;
+  gap: 24px;
+}
+
+.bookInfo {
+  width: 50%;
+}
+
+.actionList {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.actionList button {
+  background: none;
+  color: #0290ff;
+  outline: none;
+  border: none;
+  font-family: Roboto, sans-serif;
+  padding: 0;
+}
+
+.actionList button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.catName {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookProgress {
+  display: flex;
+  align-items: center;
+}
+
+.progressBar {
+  width: 50px;
+}
+
+.progPerc {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.completed {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapName {
+  opacity: 0.5;
+  font-family: Roboto, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapNumber {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.updateBtn {
+  font-family: Roboto, sans-serif;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.updateBtn:hover {
+  cursor: pointer;
+  background-color: #0051ff;
+}
+
+.form-container {
+  padding: 0 36px;
+}
+
+.newBookTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 8px;
+  letter-spacing: -0.18px;
+  color: rgb(112, 112, 112);
+}
+
+.bookForm {
+  padding: 0 8px;
+  display: flex;
+}
+
+.bookForm input {
+  width: 100%;
+  margin: 0 12px 0 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  outline: none;
+}
+
+#form-author {
+  width: 30%;
+}
+
+.addBtn {
+  width: 30%;
 }
